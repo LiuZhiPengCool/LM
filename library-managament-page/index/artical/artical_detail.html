@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ad.css" />
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <script src="showdown.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">    
+        <div class="ad title">
+        </div>
+        <div class="items">
+            <a href="../index.html" class="logo">图 书 管 理 / 主页</a>
+            <input type="text" class="search" placeholder="回车键可通过作者、书名搜索">
+            <div id="manage">
+                <a id="managa1" href="../../managament/back-end.html">后 台 管 理</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <div class="nav">
+        <div class="nav1">
+            <div class="nav1-d">
+                <div class="nav11">
+                    <em class="select-icon"></em>
+                    <a class="book_select">作品分类</a>
+                </div>
+            </div>
+            <div class="nav12">
+                <div>
+                    <a href="../allbooks/allbooks.html">全部作品</a>
+                </div>
+                <div>
+                    <a href="">排行</a>
+                </div>
+                <div>
+                    <a href="">搜索</a>
+                </div>
+                <div>
+                    <a href="">搜索</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="artical">
+        <article id="md-area" class="markdown-body">
+        </article>  <!-- 键盘每次点击实时调用 -->
+    </div>
+
+    <script>
+        let artical = document.querySelector('.artical')
+        let ar = ''
+        axios.defaults.baseURL = 'http://lzp123.nat300.top';
+        
+        window.onload = function() {
+            // artical.classList.add('blur')
+            axios.get('/artical/details')
+            .then(res => {
+                console.log(res.data.data)
+                let header = document.querySelector('#header')
+                let tx = '<h1>' + res.data.data.header + '</h1>' + '\n' + res.data.data.text
+                let md = document.querySelector('#md-area')
+                let converter = new showdown.Converter();  //增加拓展table
+                let view = converter.makeHtml(tx);
+                md.innerHTML = view
+            })
+            .catch(err => {
+
+            })
+        }
+
+        console.log(ar)
+        // 后台管理
+        let managa = document.querySelector('#managa1')
+        managa.onclick = function() {
+            axios.get('/user/auth')
+            .then(res => {
+                console.log(res.data.data)
+                let auth = res.data.data
+
+                if(auth === '管理员') {
+                    window.location.href = 'http://lzp456.natapp1.cc/managament/back-end.html'
+                } else if(auth === '用户') {
+                    window.location.href = 'http://lzp456.natapp1.cc/user/back.html'
+                } else if(auth === '未登录') {
+                    window.location.href = 'http://lzp456.natapp1.cc/sign-int-sign-up/index.html'
+                }
+            }).catch(err => {
+                window.location.href = 'http://lzp456.natapp1.cc/sign-int-sign-up/index.html'
+            }) 
+        }
+
+    </script>
+</body>
+</html>

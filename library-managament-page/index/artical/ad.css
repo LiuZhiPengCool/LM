@@ -1,0 +1,219 @@
+@font-face {
+    font-family: AliSemi;
+    src: url(../AlibabaPuHuiTi-2-75-SemiBold.ttf);
+}   
+body {
+    margin: 0;
+    padding: 0;
+    /* border: solid; */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+    height: 1500px;
+    width: 100%;
+    font-family: PingFangSC-Regular, HelveticaNeue-Light, Helvetica Neue Light, Microsoft YaHei, "sans-serif";
+    background-color: #fff;
+    font-family: AliSemi;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #3e3d43;
+}
+
+a:hover {
+    color: #cc6262;
+}
+
+.ad {
+    background-image: url(../bg.jpg);
+}
+
+.header {
+    /* border: solid; */
+    border-bottom: solid 1px #c2bdbd;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50%;
+}
+
+.logo {
+    word-spacing: 5px;
+    font-size: 1.3em;
+    color: #c0aa63;
+    font-weight: 1000;
+}
+
+#manage {
+    /* border: solid */
+}
+
+#managa1 {
+    /* border: red 1px solid; */
+    height: 100%;
+    width: 100px;
+    word-spacing: 4px;
+    font-weight: 1000;
+    color: #c0aa63;
+    font-size: 1.3em;
+}
+
+#managa1:hover {
+    background-color: #181818;
+}
+
+.ad {
+    /* background-color: #313035; */
+    /* border: solid; */
+    position: relative;
+    text-align: center;
+    font-size: 3em;
+    color: #333;
+}
+
+.items {
+    margin-top: 0.5%;
+    display: grid;
+    grid-template-columns: 20% 40% 30%;
+    grid-template-rows: 80%;
+}
+
+.items .search {
+    width: 326px;
+    height: 38px;
+}
+
+.items input {
+    /* border: transparent; */
+    height: 100%;   
+}
+
+.container {
+    /* border: solid; */
+    display: grid;
+    grid-template-rows: 3% 90%;
+}
+
+.nav {
+    /* border: solid; */
+    background-color: #3e3d43;
+    display: grid;
+    grid-template-rows: 100%;
+}
+
+.nav .nav1 {
+    /* border: solid red; */
+    width: 75%;
+    margin-left: 15%;
+    display: grid;
+    grid-template-columns: 20% 70%;
+    grid-template-rows: 100%;
+}
+
+.nav1 div {
+    /* border: solid green; */
+    color: #fff;
+    height: 100%;
+    /* width: 80%; */
+}
+
+.nav1-d {
+    /* border: solid; */
+}
+
+.nav11 {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    background-color: #313035;
+    position: relative;
+}
+
+.nav11 {
+    /* border: solid red; */
+}
+
+.nav11 em {
+    position: relative;
+    top: 25%;
+    left: 15%;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    padding: 4px 0;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    background-color: currentColor;
+    background-clip: content-box
+}
+
+.nav11 a {
+    font-size: 1em;
+    position: relative;
+    top: 15%;
+    left: 8%;
+    color: #fff;
+}
+
+.nav12 {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.nav12 div {
+    height: 100%;
+    overflow: hidden;
+}
+
+.nav12 div a {
+    top: 13%;
+    left: 37%;
+    position: relative;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    overflow: hidden;
+}
+
+.nav12 div:hover {
+    background-color: #313035;
+    /* border: 1px solid #313035; */
+    border-top: #cc6262 1px solid;
+    position: relative;
+    top: -1%;
+    overflow: hidden;
+}
+
+.artical {
+    height: 65%;
+    width: 100%;
+}
+
+#md-area {
+    border: solid 1px #c2bdbd;
+    height: 100%;
+    width: 40%;;
+    position: relative;
+}
+
+/*Github主题要求的样式引入*/
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}
+
+.blur {
+    filter: blur(20px);
+}

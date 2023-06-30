@@ -1,0 +1,616 @@
+    @font-face {
+        font-family: AliThin;
+        src: url(./AlibabaPuHuiTi-2-35-Thin.ttf);
+    }
+    
+    @font-face {
+        font-family: AliHeavy;
+        src: url(./AlibabaPuHuiTi-2-105-Heavy.ttf);
+    }    
+    
+    @font-face {
+        font-family: AliSemi;
+        src: url(./AlibabaPuHuiTi-2-75-SemiBold.ttf);
+    }   
+    body {
+        margin: 0;
+        padding: 0;
+        /* border: solid; */
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 90%;
+        height: 1500px;
+        width: 100%;
+        font-family: PingFangSC-Regular, HelveticaNeue-Light, Helvetica Neue Light, Microsoft YaHei, "sans-serif";
+        background-color: #fff;
+        font-family: AliSemi;
+    }
+
+    a {
+        list-style-type: none;
+        text-decoration: none;
+        color: #3e3d43;
+    }
+
+    a:hover {
+        color: #cc6262;
+    }
+
+    .header {
+        /* background-image: url(./bg.jpg); */
+        border: solid;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50%;
+    }
+
+    .title {
+        background-image: url(./bg.jpg);
+    }
+
+    .logo {
+        word-spacing: 5px;
+        font-size: 1.3em;
+        color: #c0aa63;
+        font-weight: 1000;
+    }
+
+    #manage {
+        /* border: solid */
+    }
+
+    #managa1 {
+        /* border: red 1px solid; */
+        height: 100%;
+        width: 100px;
+        word-spacing: 4px;
+        font-weight: 1000;
+        color: #c0aa63;
+        font-size: 1.3em;
+    }
+
+    #managa1:hover {
+        color: #cc6262;
+        /* background-color: #181818; */
+    }
+
+    .ad {
+        /* background-color: #313035; */
+        /* border: solid; */
+        position: relative;
+        text-align: center;
+        font-size: 3em;
+        color: #333;
+    }
+
+    .items {
+        margin-top: 0.5%;
+        display: grid;
+        grid-template-columns: 20% 40% 30%;
+        grid-template-rows: 80%;
+    }
+
+    .items .search {
+        width: 326px;
+        height: 38px;
+        border: solid 1px #c2bdbd;
+        display: grid;
+        grid-template-columns: 90% 10%;
+    }
+
+    .items input {
+        border: transparent;
+        height: 100%;   
+    }
+
+    .container {
+        /* border: solid; */
+        display: grid;
+        grid-template-rows: 3% 90%;
+    }
+
+    .nav {
+        /* border: solid; */
+        background-color: #3e3d43;
+        display: grid;
+        grid-template-rows: 100%;
+    }
+
+    .nav .nav1 {
+        /* border: solid red; */
+        width: 75%;
+        margin-left: 15%;
+        display: grid;
+        grid-template-columns: 20% 70%;
+        grid-template-rows: 100%;
+    }
+
+    .nav1 div {
+        /* border: solid green; */
+        color: #fff;
+        height: 100%;
+        /* width: 80%; */
+    }
+
+    .nav1-d {
+        /* border: solid; */
+    }
+
+    .nav11 {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        background-color: #313035;
+        position: relative;
+    }
+
+    .nav11 {
+        /* border: solid red; */
+    }
+
+    .nav11 em {
+        position: relative;
+        top: 25%;
+        left: 15%;
+        display: inline-block;
+        width: 30px;
+        height: 3px;
+        padding: 4px 0;
+        border-top: 3px solid;
+        border-bottom: 3px solid;
+        background-color: currentColor;
+        background-clip: content-box
+    }
+
+    .nav11 a {
+        font-size: 1em;
+        position: relative;
+        top: 15%;
+        left: 8%;
+        color: #fff;
+    }
+
+    .nav12 {
+        display: grid;
+        width: 80%;
+        grid-template-columns: repeat(4, 25%);
+    }
+
+    .nav12 div {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .nav12 div a {
+        top: 13%;
+        left: 37%;
+        position: relative;
+        font-size: 1em;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .nav12 div:hover {
+        background-color: #313035;
+        /* border: 1px solid #313035; */
+        border-top: #cc6262 1px solid;
+        position: relative;
+        top: -1%;
+        overflow: hidden;
+    }
+
+    .content {
+        /* border: solid red; */
+        display: grid;
+        grid-template-rows: 40% 60%;
+    }
+
+    .content * {
+        /* border: solid; */
+    }
+
+    .up {
+        /* border: solid; */
+        /* border-bottom: 1px solid gray; */
+        display: grid;
+        grid-template-columns: 30% 40% 20%;
+        grid-template-rows: 100%;
+    }
+
+    .down {
+        display: grid;
+        grid-template-columns: 30% 50%;
+    }
+
+    .content1 {
+        margin-left: 50%;
+        /* border: solid red 1px; */
+    }
+
+    .select {
+        border-bottom: 1px solid;
+        width: 80%;
+        height: 80%;
+        /* border: solid; */
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(16);
+    }
+
+    .select li {
+        /* border: solid 1px; */
+        list-style-type: none;
+        position: relative;
+        padding-top: 15%;
+        padding-left: 16%;
+        color: #333;
+        font-size: 1em;
+    }
+
+    .light {
+        background-color: #f7f6f2;
+    }
+
+    .dark {
+        background-color: #fcfcfa;
+    }
+
+    .select li span {
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    .select li span:hover {
+        cursor: pointer;
+        color: #cc6262;
+    }
+
+    .books_index_recommend {
+        margin-top: 1%;
+        /* border: solid red; */
+        /* border-bottom: 1px solid; */
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 55% 40%;
+    }
+
+    .books_index_recommend .bir1 {
+        display: grid;
+        /* border: solid green; */
+        grid-template-rows: 80% 20%;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition-duration: 2s;
+        transform: translateX(0px);
+    }
+
+    .bir11 {
+        color: #fff;
+        background-color: #070713;
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        /* border: solid; */
+        z-index: 4;
+        opacity: 0.8;
+    }
+
+    .bir11:hover {
+        z-index: 5;
+        background-color: #292727;
+    }
+
+    .bir11>* {
+        /* border-right: 1px #fff solid; */
+        text-align: center;
+    }
+
+    .bir11 div {
+        padding-top: 7px;
+    }
+
+    .bir11 div:hover {
+        background-color: #eb3149;
+    }
+
+    .books_index_recommend .bir2 {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        font-size: 0.6em;
+    }
+
+    .bir2 > *{
+        /* border: solid; */
+    }
+
+    .bir2 div:hover {
+        border: #e6e6e6 1px solid;
+        box-shadow: 0 0 20px rgb(200, 90, 100, 0.3);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .bir2 div img:hover {
+        border: #e6e6e6 1px solid;
+        box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .bir2 div img {
+        max-width: 100%;
+        max-height: 100%;
+        height: 150px;
+        /* margin-top: 4%; */
+    }
+
+    .bad1 {
+        background-repeat: no-repeat;
+        /* background-image: url(../common/imgs/ir.png); */
+    }
+
+    .bir3 {
+        /* border: solid; */
+    }
+
+    .bir31 {
+        /* border: solid; */
+        width: 80%;
+        height: 80%;
+        position: relative;
+        left: 10%;
+        top: 1%;
+        background-color: #f7f6f6;
+    }
+
+    .bir311 {
+        /* border: solid; */
+        width: 90%;
+        height: 90%;
+        position: relative;
+        left: 3%;
+        top: 3%;
+        display: grid;
+        grid-template-rows: repeat(6, 14.3%);
+    }
+
+    .bir311 li {
+        overflow: hidden;
+        list-style-type: none;
+        padding-top: 4%;
+        border-bottom: 1px solid;
+    }
+
+    .bir311 > *  {
+        text-align: center;
+        /* border: solid; */
+    }
+
+    .bir311 .adh {
+        font-weight: 1000;
+    }
+
+
+    /* .bir12 {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: 100%;
+    }
+
+    .bir12 div {
+        border: solid;
+        text-align: center;
+    } */
+
+    .bd {
+        font-size: 1.2em;
+        background-color: #eb3149;
+        color: #fff;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition-duration: 2s;
+    }
+
+    /* .bir12 div:hover {
+        background-color: #d33c3c;
+    } */
+
+    .bir12 div:hover {
+        background-color: #eb3149;
+        /* color: #fff; */
+        box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .book_recommend h1 {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .book_recommend {
+        /* border: solid; */
+        position: relative;
+        left: -5%;
+    }
+
+    .bs1 {
+        /* border: solid; */
+        width: 90%;
+        margin-bottom: 10px;
+        height: 50px;
+    }
+
+    .bs li {
+        border-radius: 3%;
+        list-style-type: none;
+        text-align: center;
+    }
+
+    .bs li:hover {
+        background-color: #e6e6e6;
+        color: #292727;
+        box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .bs1 * {
+        font-size: 0.2em;
+        display: inline-block;
+    }
+
+    #book {
+        /* border: solid; */
+        background-color: #ffff;
+    }
+
+    #book:hover {
+        background-color: #fdf3f3;
+        border: #e6e6e6 1px solid;
+        box-shadow: 0 0 0 rgb(0, 0, 0, 0.3);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .book_recommend {
+        margin-left: 50%;
+        /* border: solid; */
+    }
+
+    .rword {
+        margin-top: 8%;
+        padding-bottom: 10%;
+        border-bottom: solid 1px;
+        margin-bottom: 20%;
+    }
+
+    .book_show {
+        /* border: solid; */
+        display: grid;
+        grid-template-rows: 10% 85% 5%;
+        padding: 3% 3%;
+    }
+
+    .word {
+        margin-top: -1%;
+        font-size: 1.3em;
+        border-bottom: solid 1px;
+    }
+
+    .book_show p {
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+    .books {
+        /* border: solid; */
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(3, 33%);
+    }
+
+    #bookcontainer {
+        /* border: solid; */
+        border-color: #888484;
+        border-bottom: 1px solid #b9a8a8;
+    }
+
+    #book img {
+        /* border: solid; */
+        position: relative;
+        left: 5%;
+        top: 5%;
+        width: 90%;
+        height: 90%;
+        /* display: inline-block; */
+    }
+
+    #book {
+        width: 80%;
+        height: 70%;
+        border: #3e3d43 solid 1px transparent;
+        border-radius: 2%;
+        font-size: 0.5em;
+        display: grid;
+        grid-template-columns: 30% 40%;
+        grid-template-rows: 100%;
+        /* border: solid; */
+        /* margin: 1% 1%; */
+        /* border-bottom: solid; */
+        background-color: #b88b8b transparent;
+        /* backdrop-filter: blur(20px); */
+        opacity: 0.8;
+    }
+
+    #book #ct {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 20% 20% 40%;
+        text-align: center;
+    }
+
+    #ct h3 {
+        font-size: 1.5em;
+    }
+
+    #ct #bintro {
+        overflow: hidden;
+    }
+
+    .book_show .page {
+        /* border: solid; */
+        position: relative;
+        left: 30%;
+        width: 300px;
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+    }
+
+    .page button {
+        margin: 10px 10px;
+        border: transparent;
+        border-radius: 9%;
+        opacity: 0.5;
+    }
+
+    .page button:hover {
+        color: #fff;
+        background-color: #3e3d43;
+    }
+
+    .book_list {
+        /* border: solid; */
+        margin-right: 40%;
+    }
+
+    footer {
+        background-color: #222;
+        color: #fff;
+        font-size: 14px;
+        bottom: 0;
+        position: relative;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 999;
+        height: 100px;
+    }
+
+    footer p {
+        margin: 10px 0;
+
+    }
+
+    footer i {
+        color: red;
+    }
+
+    footer a {
+        color: #3c97bf;
+        text-decoration: none;
+    }
+
+    .logo:hover {
+        cursor: pointer;
+        /* background-color: #181818; */
+    }
+
+    .bir311 li a:hover {
+        cursor: pointer;
+    }

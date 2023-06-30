@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./backendcss.css" />
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <p class="pre">图书管理 管理员界面</p>
+        <div class="tmp">
+            <div class="message">
+                <div class="m">邮件</div>
+                <div class="m2"></div>
+            </div>
+            <div class="username">
+                <div class="u">用户</div>
+            </div>
+        </div>
+    </div>
+    <div class="detail">
+        <div class="page-left">
+            <div class="items">
+                <div class="item">
+                    <div class="head" onclick="showMenu('i3')">
+                        <p>用户管理</p>
+                    </div>
+                    <div id="i3" class="content hid">
+                        <a class="ac" target="ifr_a1" href="./user/book_borrow_managa.html"><p>用户借阅图书</p></a>
+                        <a class="ac" target="ifr_a1" href="./user/user_auth.html"><p>用户权限编辑</p></a>
+                        <a class="ac" target="ifr_a1" href="./user/user_edit.html"><p>用户信息修改（密码重置、邮箱修改）</p></a><br>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="head" onclick="showMenu('i1')">
+                        <p>图书管理</p>
+                    </div>
+                    <div id="i1" class="content1 hid">
+                        <a class="ac" target="ifr_a1" href="./book/book-managa.html"><p>图书信息编辑(新增/删除/修改/查阅)</p></a>
+                        <a class="ac" target="ifr_a1" href="./book/book-recommend.html"><p>主页封页推荐管理</p></a>
+                        <!-- <a class="ac" target="ifr_a1" href="./book/book-managa2.html"><p>######</p></a> -->
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="head" onclick="showMenu('i2')">
+                        <p>借阅管理</p>
+                    </div>
+                    <div id="i2" class="content3 hid">
+                        <a class="ac" target="ifr_a1" href="./borrow/book_borrow_managa.html"><p>借阅此数统计</p></a>
+                        <a class="ac" target="ifr_a1" href="./borrow/book_borrow.html"><p>借阅归还管理</p></a>
+                        <!-- <a class="ac" target="ifr_a1" href="./borrow/book_back.html"><p>######</p></a> -->
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="head" onclick="showMenu('i2')">
+                        <p>资讯新闻管理</p>
+                    </div>
+                    <div id="i2" class="content3 hid">
+                        <a class="ac" target="ifr_a1" href="./artical/edit.html"><p>新闻资讯推送编辑</p></a>
+                        <a class="ac" target="ifr_a1" href="../user/artical/artical.html"><p>撰写文章</p></a>
+                        <!-- <a class="ac" target="ifr_a1" href="./borrow/book_back.html"><p>######</p></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="area">
+            <iframe id="page" src="./book/book-managa.html" frameborder="0" name="ifr_a1"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+          Created with<i class="fa fa-heart"></i>by
+          <a href="https://www.bilibili.com" target="_blank">刘志鹏</a>
+        </p>
+    </footer>
+
+    <div class="info ds">
+        <div class="users">
+        </div>
+        <div>
+            <button class="closemessage">关闭</button>
+            <div class="dialog"></div>
+            <div class="text">
+                <textarea class="t1" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <button class="textsub">提交</button>
+        </div>
+    </div>
+    <script src="./backendjs.js"></script>
+</body>
+</html>

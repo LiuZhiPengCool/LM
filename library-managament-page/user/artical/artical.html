@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布文章</title>
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="showdown.min.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+
+    <style>
+        .mainHeader{
+
+            padding-top: 1px;
+            padding-bottom: 1px;
+            background-color: white !important;
+            border-bottom: 5px solid #ccc;
+        }
+
+        .logo_icon{
+
+            height: 38px;
+        }
+
+        .liColor{
+            color: #4f4f4f
+
+        }
+
+        .toolbar {
+            border: 1px solid #ccc;
+        }
+        .text {
+            border: 1px solid #ccc;
+            height: 500px;
+        }
+
+        /*Github主题要求的样式引入*/
+        .markdown-body {
+            border: solid 1px #ccc;
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: whitesmoke">
+
+<div class="container-fluid">
+    <!--    顶部导航栏-->
+    <div class="row">
+        <div class="col-md-12" style="padding: 0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light mainHeader">
+                <!--                <a class="navbar-brand" href="#">Navbar w/ text</a>-->
+                <div class="logoDiv" id="logoIcon" style="cursor:pointer">
+                    <!-- <img class="logo_icon" src="logo_icon_white.png"/> -->
+                </div>
+
+                <div class="logoDiv" id="logoText">
+                    <!-- <img class="logo_icon" src="logo_text_white.png"/> -->
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarText">
+
+                    <ul class="navbar-nav mr-auto">
+                        <!--                        <li class="nav-item" style="padding-left: 20px">-->
+                        <!--                            <a class="nav-link nav-item"  href="#">首页 </a>-->
+                        <!--                        </li>-->
+
+                    </ul>
+
+                    <span class="navbar-nav">
+                        <!-- <a class="nav-link navbar-item active" href="#">个人中心</a> -->
+
+                    </span>
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+    <div class="row" style="min-height: 10px"></div>
+
+    <div class="row">
+        <div class="col-md-1">
+
+
+        </div>
+
+        <div class="col-md-2" style="padding-right: 0px">
+
+            <div class="row">
+
+                <div class="col-md-3"></div>
+
+                <div class="col-md-9" style="margin-left: -230px;">
+                    <div class="card">
+
+                        <ul class="nav nav-pills nav-fill flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active list-group-item" href="#" style="background-color: #188080;">发布文章</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-6" style="padding-left: 0px;margin-left: -230px;">
+            <div class="card">
+                <div class="card-header" style="background-color: white">
+                    <div class="row">
+                        <div class="col-md-3" style="font-size: 18px">发布文章</div>
+                        <!--                        <div class="col-md-9" style="margin-top: 8px;font-size: 12px;text-align: right">当前位置>专委会介绍>文件资料</div>-->
+                    </div>
+                </div>
+
+                <div class="card-body" style="min-height: 1000px">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group mb-1 mt-2 ml-0 mr-1" >
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"  >文章标题</span>
+                                </div>
+                                <input onblur=writeHeader()
+                                id="ih" type="text" 
+                                class="form-control" 
+                                placeholder="不多于100字" 
+                                style="margin-right: 5px">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div style="padding: 8px 0; color: #ccc"></div>
+                    <div id="div1" class="toolbar">
+                    </div>
+
+                    <textarea style="width: 100%;" id="content-no-swift" class="text" onkeyup=mdConverter()>### 支持markdown语法</textarea>
+
+                    <div class="row">
+
+                        <div class="col-md-5">
+                            <div class="input-group mb-3 mt-3 ml-0" >
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">文章分类</span>
+                                </div>
+                                <input id="categoryInput" type="text" class="form-control" >
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="padding: 15px">
+
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2 ml-0">
+                            <button type="button" class="btn btn-primary" id="publishBtn" style="background-color: #188080;">发布文章</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-light">返回</button>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div style="width: 600px;height: 1000px;">
+            <article class="markdown-body" id="content-swift" style="width: 100%;height: 100%;">
+                效果显示
+            </article>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+    <script src="artical.js"></script>
+</div>
+
+</body>
+</html>

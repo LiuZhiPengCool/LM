@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./style-header.css" /> -->
+    <!-- <link rel="stylesheet" href="./style-container.css" /> -->
+    <link rel="stylesheet" href="./css2.css" />
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <title>图书管理首页</title>
+</head>
+
+<body>
+    <div class="header">    
+        <div class="ad title">
+        </div>
+        <div class="items">
+            <a href="../index.html" class="logo">图 书 管 理 / 主页</a>
+            <input type="text" class="search" placeholder="回车键可通过作者、书名搜索">
+            <div id="manage">
+                <a id="managa1" href="../../managament/back-end.html">后 台 管 理</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="nav">
+            <div class="nav1">
+                <div class="nav1-d">
+                    <div class="nav11">
+                        <em class="select-icon"></em>
+                        <a class="book_select">作品分类</a>
+                    </div>
+                </div>
+                <div class="nav12">
+                    <div>
+                        <a href="../allbooks/allbooks.html">全部作品</a>
+                    </div>
+                    <div>
+                        <a href="../recomendbooks/allbooks.html">排行</a>
+                    </div>
+                    <div>
+                        <a href="./s.html">搜索</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="up">
+                <div class="content1">
+                    <div class="select">
+                        <li>
+                            <span>科幻</span>
+                        </li>
+                        <li>
+                            <span>现实</span>
+                        </li>
+                        <li>
+                            <span>悬疑</span>
+                        </li>
+                        <li>
+                            <span>推理</span>
+                        </li>
+                        <li>
+                            <span>玄幻</span>
+                        </li>
+                        <li>
+                            <span>战争幻想</span>
+                        </li>
+                        <li>
+                            <span>人物传记</span>
+                        </li>
+                        <li>
+                            <span>历史传记</span>
+                        </li>
+                        <li>
+                            <span>散文</span>
+                        </li>
+                        <li>
+                            <span>短篇</span>
+                        </li>
+                        <li>
+                            <span>武侠</span>
+                        </li>
+                        <li>
+                            <span>奇幻</span>
+                        </li>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="book_show">
+                    <div class="books">
+                        <div id="book">
+                            <img src="" alt="">
+                            <div>
+                                <p>书名</p>
+                                <p>作者</p>
+                                <p>简介</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <button class="pre"><<</button>
+                        <button class="current-page"></button>
+                        <button class="next">>></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>
+            Created with<i class="fa fa-heart"></i>by
+            <a href="https://www.bilibili.com" target="_blank">刘志鹏</a>
+        </p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>

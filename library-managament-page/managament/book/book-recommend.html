@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./brcss.css" />
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>封页推荐管理</h1>
+    </div>
+
+    <table class="content">
+        <div class="c1">
+            <button class="addB">新增</button>
+            <!-- <button class="pitchDel">批量删除</button> -->
+            <button class="f">刷新</button>
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+        <tr class="bh">
+            <!-- <th><input type="checkbox" id="allselect"></th> -->
+            <th>书名</th>
+            <th id="im">封页(点击放大)</th>
+            <th id="bo">操作</th>
+        </tr>
+        <tr class="bt">
+
+        </tr>
+    </table>
+
+    <div id="imgShow">
+        <button class="clo">关闭</button>
+        <div class="show">
+
+        </div>
+    </div>
+
+    <div class="bk">
+        <div>
+            <p>书名：</p>
+            <input id="bn"/>
+        </div>
+        <div>
+            <p>作者：</p>
+            <input id="au"/>
+        </div>
+        <div>
+            <p>图片请联系数据库管理员定制</p>
+        </div>
+        <button class="bksave">保存</button>
+        <button class="bkclose">关闭</button>
+    </div>
+    <script src="./br.js"></script>
+</body>
+</html>

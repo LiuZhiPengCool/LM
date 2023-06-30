@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <title>图书管理登录/注册界面</title>
+</head>
+<body>
+    <h2>登录 / 注册</h2>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="">
+                <h1>注 册</h1>
+                <input class="sphone" type="number" placeholder="手机号(数字)">
+                <input class="semail" type="email" placeholder="邮箱xxx@xxx.xxx">
+                <input class="spw" type="password" placeholder="密码(6-8位)">
+                <input class="spw2" type="password" placeholder="密码(6-8位) 确认密码">
+                <div class="cd">
+                  <input class="scode code" type="number" placeholder="验证码" />
+                  <div class="imgc">
+                    <span>
+                      <p>
+                        <u class="realcode">0 0 0 0</u>
+                      </p>
+                    </span>
+                  </div>
+                </div>
+                <button class="signup">注册</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <!-- <form action="../index/index.html"> -->
+            <form action="#">
+              <h1>登 录</h1>
+              <input class="user-phone" type="number" placeholder="手机号(数字)" />
+              <input class="user-password" type="password" placeholder="密码(6-8位)" />
+              <div class="cd">
+                <input class="lcode code" type="number" placeholder="验证码" />
+                <div class="imgc">
+                  <span>
+                    <p>
+                      <u class="realcode">0 0 0 0</u>
+                    </p>
+                  </span>
+                </div>
+              </div>
+              <a href="#">忘记密码?</a>
+              <button class="login">登 录</button>
+            </form>
+          </div>
+
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h1>点击登录</h1>
+                <p>
+                  登录~
+                </p>
+                <button class="ghost" id="signIn">登 录</button>
+              </div>
+              
+              <div class="overlay-panel overlay-right">
+                <h1>跳转注册</h1>
+                <p>注册~</p>
+                <button class="ghost" id="signUp">注 册</button>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <footer>
+      <p>
+        Created with<i class="fa fa-heart"></i>by
+        <a href="https://www.bilibili.com" target="_blank">刘志鹏</a>
+      </p>
+    </footer>
+
+    <div class="tips phoneErr ds">手机格式错误</div>
+    <div class="tips pwErr ds">密码错误</div>
+    <div class="tips codeErr ds">验证码错误</div>
+
+    <div class="tips sphoneErr ds">手机格式错误</div>
+    <div class="tips semailErr ds">邮箱格式错误</div>
+    <div class="tips spwErr ds">两次密码不一致</div>
+
+    <div class="info">
+      <h1>提供两个账号使用</h1>
+      <table>
+        <tr>
+          <th>账号</th>
+          <th>密码</th>
+          <th>权限</th>
+        </tr>
+        <tr>
+          <td>15327237368</td>
+          <td>635241</td>
+          <td>普通用户</td>
+        </tr>
+        <tr>
+          <td>123</td>
+          <td>123456</td>
+          <td>管理员</td>
+        </tr>
+      </table>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

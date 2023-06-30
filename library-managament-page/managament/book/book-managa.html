@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bmcss.css" />
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    <div class="header">
+        <input class="hn" type="text" placeholder="名称">
+        <input class="ha" type="text" placeholder="作者">
+        <!-- <input class="ht" type="text" placeholder="类型"> -->
+        <button class="hs">搜索</button>
+    </div>
+
+    <div class="c1">
+        <button class="addB">新增</button>
+        <button class="pitchDel">批量删除</button>
+        <button class="f">刷新</button>
+    </div>
+
+    <table class="content">
+        <tr class="bh">
+            <th><input type="checkbox" id="allselect"></th>
+            <th>书名</th>
+            <th>作者</th>
+            <th>类型</th>
+            <th>库存</th>
+            <th>价格</th>
+            <th>借阅次数</th>
+            <th>存放位置</th>
+            <th id="bo">操作</th>
+        </tr>
+        <tr class="bt">
+
+        </tr>
+    </table>
+    <div class="sp">
+        <button class="pre">上一页</button>
+        <p>当前页</p>
+        <button class="next">下一页</button>
+    </div>
+
+
+    <div class="bk dp">
+        <div>
+            <p>书名：</p>
+            <input id="bn"/>
+        </div>
+        <div>
+            <p>作者：</p>
+            <input id="au"/>
+        </div>
+        <div>
+            <p>类型：</p>
+            <input id="ty"/>
+        </div>
+        <div>
+            <p>库存：</p>
+            <input id="store"/>
+        </div>
+        <div>
+            <p>价格：</p>
+            <input id="pri"/>
+        </div>
+        <div>
+            <p>借阅次数：</p>
+            <input id="bnum"/>
+        </div>
+        <div>
+            <p>存放位置：</p>
+            <input id="pla"/>
+        </div>
+        <button class="save">保存</button>
+        <button class="close">关闭</button>
+    </div>
+    <script src="./bms.js"></script>
+    <!-- <script src="./bms1.js"></script> -->
+</body>
+</html>
